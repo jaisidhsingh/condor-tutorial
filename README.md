@@ -21,3 +21,11 @@ condor_submit_bid 25 -i -append request_cpus=8 -append request_memory=10000
 # Resource pricing:
 
 <img src="assets/pricing.png">
+
+# `fast` partition
+
+Does not support filelock. So,
+
+- Can't download `huggingface` models or dataset from the code.
+- Need to download the files beforehand into `/fast`
+- `wget`, `gdown`, works in `fast`.
